@@ -1,4 +1,8 @@
 from logging.config import fileConfig
+import sys
+import os
+
+sys.path.append(os.getcwd())
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
@@ -21,6 +25,7 @@ from app.core.database import Base
 # for 'autogenerate' support
 # from myapp import mymodel
 from app.models.user import User
+from app.models.refresh_token import RefreshToken
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
 
