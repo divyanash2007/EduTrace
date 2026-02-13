@@ -1,8 +1,8 @@
 from sqlalchemy import Column, String, TIMESTAMP
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
-from app.core.database import Base
-from app.models.base import UUIDMixin, TimestampMixin
+from core.database import Base
+from models.base import UUIDMixin, TimestampMixin
 
 class User(Base,UUIDMixin,TimestampMixin):
     __tablename__ = "users"
